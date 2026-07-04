@@ -1,1 +1,2 @@
 # artcommission-hub
+**ArtCommission Hub** es una plataforma web moderna diseñada para conectar a clientes con artistas profesionales independientes para la contratación de comisiones de dibujo digital.
