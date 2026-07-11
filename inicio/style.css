@@ -3,6 +3,8 @@
     --bg-primary:#0B1020;
     --bg-secondary:#161E33;
     --card:#202A40;
+    --fondo2:#1a273f;
+    --fondo1:#0c1a3d;
 
     --purple:#7C3AED;
     --purple-hover:#6D28D9;
@@ -78,56 +80,59 @@ nav ul li:hover {
 }
 
 /* Sección de Bienvenida */
-section {
+.hero-section {
+    background: #07142f;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 75vh;
-    padding: 0 20px;
+
+    min-height: 75vh;
+    padding: 80px 20px;
 }
 
-section h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.hero-section h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
-    letter-spacing: -0.05em;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    max-width: 900px;
 }
 
-section p {
+.hero-section p {
     font-size: 1.2rem;
-    color: #9CA3AF; /* Texto gris suave */
-    margin-bottom: 35px;
-    max-width: 600px;
-    line-height: 1.6;
+    color: var(--text-light);
+    max-width: 650px;
+    margin-bottom: 40px;
+    line-height: 1.8;
 }
 
-/* Botón */
-button {
-    background-color: #7C3AED; /* Morado Ko-fi / ArtStation */
+.hero-section button {
+    background: var(--purple);
     color: white;
     border: none;
-    padding: 14px 32px;
+    padding: 15px 35px;
+    border-radius: 999px;
     font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 9999px; /* Botón completamente ovalado */
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
-button:hover {
-    background-color: #6D28D9;
-    transform: scale(1.03); /* Crece sutilmente */
-}  
+
+.hero-section button:hover {
+    background: var(--purple-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+}
 
 
 /* Sección de Artistas */
 .artists-section {
     height: auto;
     padding: 60px 20px;
-    background-color: #0F172A; /* Un tono ligeramente diferente para contrastar */
+    background-color:#030b24; 
 }
-
 .artists-section h2 {
     font-size: 2rem;
     margin-bottom: 40px;
@@ -223,6 +228,8 @@ button:hover {
 .features-section {
     padding: 100px 20px;
     text-align: center;
+    background-color: #07142f;
+    padding: 80px 20px;
 }
 
 /* titulo ventajas */
@@ -268,4 +275,54 @@ button:hover {
 .description {
     color: var(--text-light);
     line-height: 1.6;
+}
+
+
+/* Sección de categorias */
+.category-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color:#030b24;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.category-card {
+    background: var(--card);
+    border-radius: 25px;
+    padding: 40px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--purple);
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.explore-card{
+    background: var(--card);
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.explore-card:hover{
+    transform: translateY(-10px);
+    border: 1px solid var(--purple);
 }
